@@ -1,0 +1,280 @@
+.three-column-block {
+    padding: 0;
+}
+
+.image-column {
+    height: 500px;
+    overflow: hidden;
+}
+
+.image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.image-column:hover img {
+    transform: scale(1.05);
+}
+
+.text-column {
+    background-color: #ffffff;
+    min-height: 500px;
+}
+
+.text-column h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.text-column p {
+    color: #666;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.btn-outline-dark {
+    border-width: 2px;
+    padding: 10px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.star-label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.rating-stars input[type="radio"]:checked ~ .star-label,
+.rating-stars input[type="radio"]:hover ~ .star-label,
+.star-label:hover {
+    color: #ffc107;
+}
+
+.rating-stars:hover .star-label {
+    color: #ffc107;
+}
+
+.rating-stars .star-label:hover ~ .star-label {
+    color: #ddd;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 20px 25px 15px;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px 25px;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 15px 25px 20px;
+}
+
+.toast {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+    overflow: hidden;
+}
+
+.toast-header.bg-success {
+    background-color: #198754 !important;
+}
+
+.toast.show {
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1440px) {
+    .image-column {
+        height: 600px;
+    }
+    
+    .text-column {
+        min-height: 600px;
+    }
+    
+    .text-column h5 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-column {
+        height: 450px;
+    }
+    
+    .text-column {
+        min-height: 450px;
+        padding: 40px 30px !important;
+    }
+    
+    .text-column h5 {
+        font-size: 1.4rem;
+    }
+    
+    .star-label {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-column {
+        height: 400px;
+    }
+    
+    .text-column {
+        min-height: 400px;
+        padding: 30px 20px !important;
+        order: 2;
+    }
+    
+    .left-image {
+        order: 1;
+    }
+    
+    .right-image {
+        order: 3;
+    }
+    
+    .text-column h5 {
+        font-size: 1.3rem;
+    }
+    
+    .btn-outline-dark {
+        padding: 8px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .star-label {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .image-column {
+        height: 300px;
+    }
+    
+    .text-column {
+        min-height: 350px;
+        padding: 25px 15px !important;
+    }
+    
+    .text-column h5 {
+        font-size: 1.2rem;
+    }
+    
+    .text-column p {
+        font-size: 0.8rem;
+    }
+    
+    .btn-outline-dark {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .star-label {
+        font-size: 1.4rem;
+    }
+    
+    .modal-body {
+        padding: 15px;
+    }
+    
+    .toast-container {
+        padding: 1rem !important;
+    }
+    
+    .toast {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .three-column-block .row {
+        flex-direction: column;
+    }
+}
+
+.text-column {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
